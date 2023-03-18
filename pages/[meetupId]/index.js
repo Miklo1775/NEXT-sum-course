@@ -43,6 +43,7 @@ export const getStaticProps = async (context) => {
   const response = await supabase.from("meetups").select().eq("id", meetupId);
 
   const data = response.data[0];
+  console.log(response);
 
   return {
     props: {

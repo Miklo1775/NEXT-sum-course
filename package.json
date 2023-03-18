@@ -7,9 +7,13 @@
     "build": "next build",
     "start": "next start"
   },
+  "engines": {
+    "node": "v14.21.3"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.11.0",
     "next": "10.0.6",
+    "postcss": "^8.4.21",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   }

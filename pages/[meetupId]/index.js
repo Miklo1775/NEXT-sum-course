@@ -25,7 +25,7 @@ export const getStaticPaths = async () => {
   const response = await supabase.from("meetups").select("id");
   console.log(response.data);
   return {
-    fallback: false,
+    fallback: "blocking",
     paths: response.data.map((meetup) => {
       return {
         params: {
@@ -48,6 +48,7 @@ export const getStaticProps = async (context) => {
     props: {
       meetupData: data,
     },
+    revalidate: 1,
   };
 };
 
